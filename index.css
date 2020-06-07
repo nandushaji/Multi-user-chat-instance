@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+:root {
+    --main-color: #5ea3d0;
+    --main-colorrec: grey;
+    --secondary-color: white;
+    --main-text-color: #3e5869;
+    --secondary-text-color: #b0c7d6;
+    --send-message-form: #F5F5F5;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+    font-weight: 200;
+    color: #3e5869; 
+}
+
+#root {
+    height: 100%;
+}
+
+.app {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
+    grid-template-areas: 
+        " h h h h h h h h"
+        " m m m m m m m m"
+        " m m m m m m m m"
+        " m m m m m m m m"
+        " m m m m m m m m"
+        " m m m m m m m m"
+        " s s s s s s s s";
+}
+
+.header {
+    grid-area: h;
+}
+
+
+.message-list {
+    grid-area: m;
+}
+
+.send-message-form {
+    grid-area: s;
+}
+
+/* REST OF CSS */
+
+.message {
+    list-style: none;
+    margin: 15px 0;
+    text-align:left;
+}
+h2{
+    width:100%;
+}
+
+
+.message .message-username {
+    font-size: 11px;
+    padding:5px;
+    color: var(--main-text-color);
+    opacity: 0.9;
+    margin-bottom: 6px;
+}
+.message .message-time {
+    font-size: 11px;
+    padding:5px;
+    color: var(--secondary-color);
+    opacity: 0.9;
+    margin-bottom: 6px;
+}
+.message .message-text {
+    background: var(--main-color);
+    color: var(--secondary-color);
+    display: inline;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+.messagerec{
+    list-style: none;
+    margin: 15px 0;
+    text-align:right;
+}
+h2{
+    width:100%;
+}
+
+
+.messagerec .messagerec-username {
+    font-size: 11px;
+    padding:5px;
+    color: var(--main-text-color);
+    opacity: 0.9;
+    margin-bottom: 6px;
+}
+.messagerec .messagerec-time {
+    font-size: 11px;
+    padding:5px;
+    color: var(--secondary-color);
+    opacity: 0.9;
+    margin-bottom: 6px;
+}
+.messagerec .messagerec-text {
+    background: var(--main-color);
+    color: var(--secondary-color);
+    display: inline;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+.header{
+     background: var(--main-color);
+     color: var(--secondary-color);
+     display: flex;
+     text-align: center;
+     justify-content: center;
+}
+
+.message-list {
+    box-sizing: border-box;
+    padding-left: 6px;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background: var(--secondary-color);
+}
+
+.send-message-form {
+    background: var(--send-message-form);
+    display: flex;
+}
+
+.send-message-form input {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 0;
+    border-style: none;
+    background: var(--send-message-form);
+    font-weight: 200;
+
+}
+
+.send-message-form input:focus {
+    outline-width: 0;
+}
+
+.send-message-form input::placeholder {
+    color: var(--main-text-color);
+}
+
+.help-text {
+    position: absolute;
+    top: 10px;
+}
+.buttonred{
+    background: red;
+    color:white;
+    padding:5px;
+    
+}
